@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #acb4c1;
+  align-self: flex-start;
+  min-height: 10vh;
+  margin: 0;
+}
+
+.navItem {
+  color: #39384a;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0 1em;
+}
+.logoImg {
+  padding: 0 1em;
+}

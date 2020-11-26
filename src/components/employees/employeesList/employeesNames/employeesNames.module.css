@@ -1,0 +1,20 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0.2em 0;
+}
+.listItemText {
+  text-decoration: none;
+  color: #39384a;
+  margin-right: 1em;
+}
+.listItemSpan{
+  margin: 0 0.5em;
+}
+

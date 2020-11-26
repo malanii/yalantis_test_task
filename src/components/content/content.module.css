@@ -1,0 +1,16 @@
+.wrapper {
+  align-self: center;
+  height: 80vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img {
+  width: 100%;
+}
+.text {
+  text-decoration: none;
+  color: #acb4c1;
+  font-weight: bold;
+}
