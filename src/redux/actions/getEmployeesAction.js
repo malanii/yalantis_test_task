@@ -29,7 +29,8 @@ export function fetchEmployees() {
         dispatch(fetchedDataSuccess(res.data));
       })
       .catch((error) => {
-        dispatch(employeesDataHaveErrored(true));
+        dispatch(employeesDataHaveErrored(true), employeesDataLoading(false));
+        dispatch(employeesDataLoading(false));
         console.log(error.response);
       });
   };

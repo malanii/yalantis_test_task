@@ -2,7 +2,6 @@ import React from "react";
 import s from "./employeesList.module.css";
 import EmployeesNames from "./employeesNames/EmployeesNames";
 
-
 function EmployeesList({ alphabet, employees }) {
   const employeesListObject = alphabet.reduce((employeesListObject, letter) => {
     employeesListObject[letter] = employees.filter(

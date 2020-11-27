@@ -5,6 +5,9 @@ import Title from "../title/Title";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchEmployees } from "../../redux/actions/getEmployeesAction";
+import PreLoader from "../preLoader/PreLoader";
+import Errors from "../errors/Errors";
+import EmployeesBirthdays from "./employeesBirthdays/EmployeesBirthdays";
 
 const alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
 const employeesTitle = "Employees";
@@ -19,22 +22,23 @@ function EmployeesContainer() {
     dispatch(fetchEmployees());
   }, []);
   if (loading) {
-    return <p>Loading</p>;
+    return <PreLoader />;
   }
   if (errors) {
-    return <p>Errors</p>;
+    return <Errors />;
   }
 
   return (
-    <div className={s.wrapper}>
-      <div className={s.employeesLisWrapper}>
-        <Title title={employeesTitle} />
-        <EmployeesList alphabet={alphabetArray} employees={employees} />
+      <div className={s.wrapper}>
+        <div className={s.employeesLisWrapper}>
+          <Title title={employeesTitle} />
+          <EmployeesList alphabet={alphabetArray} employees={employees} />
+        </div>
+        <div className={s.employeesBirthdaysWrapper}>
+          <Title title={employeesBirthdaysTitle} />
+          <EmployeesBirthdays />
+        </div>
       </div>
-      <div className={s.employeesBirthdaysWrapper}>
-        <Title title={employeesBirthdaysTitle} />
-      </div>
-    </div>
   );
 }
 
