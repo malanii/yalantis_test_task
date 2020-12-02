@@ -8,11 +8,17 @@ import rootReducer from "./redux/reducers/index";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
+import saveState, {persistedState} from "./commonHelpers/localStorage";
 
 const store = createStore(
   rootReducer,
+    persistedState,
   composeWithDevTools(applyMiddleware(thunk))
 );
+
+store.subscribe(() => {
+    saveState({addEmployees: store.getState().addEmployees})
+});
 
 const application = (
   <Provider store={store}>

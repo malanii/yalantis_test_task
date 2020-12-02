@@ -36,7 +36,7 @@ function EmployeesBirthdays() {
   );
 
   if (addedEmployees.length === 0) {
-    return <p>No added employee</p>;
+    return <p>No selected employees</p>;
   }
 
   return (
@@ -56,5 +56,3 @@ function EmployeesBirthdays() {
 }
 
 export default EmployeesBirthdays;
-
-
