@@ -1,13 +1,13 @@
 import React from "react";
-import s from "./employeesList.module.css";
-import EmployeesNames from "./employeesNames/EmployeesNames";
+import s from "./employeesNamesFullList.module.css";
+import EmployeesFilteredNamed from "../employeesFilteredNamed/EmployeesFilteredNamed";
 import {
   addEmployeeBirthday,
   deleteEmployeeBirthday,
-} from "../../../redux/actions/employeeBirthdayAction";
+} from "../../redux/actions/employeeBirthdayAction";
 import { useSelector, useDispatch } from "react-redux";
 
-function EmployeesList({ alphabet, employees }) {
+function EmployeesNamesFullList({ alphabet, employees }) {
   const checkedItems = useSelector(
     (state) => state.addEmployees.addedEmployees
   );
@@ -37,7 +37,7 @@ function EmployeesList({ alphabet, employees }) {
           <li key={index} className={s.listItem}>
             {key}
           </li>
-          <EmployeesNames
+          <EmployeesFilteredNamed
             names={employeesListObject[key]}
             checkedItems={checkedItems}
             handleChange={handleChange}
@@ -48,4 +48,4 @@ function EmployeesList({ alphabet, employees }) {
   );
 }
 
-export default EmployeesList;
+export default EmployeesNamesFullList;

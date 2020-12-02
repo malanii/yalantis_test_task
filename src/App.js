@@ -3,14 +3,14 @@ import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/footer/Footer";
 import {Route} from 'react-router-dom';
 import s from "./App.module.css";
-import Content from "./components/content/Content";
-import EmployeesContainer from "./components/employees/EmployeesContainer";
+import HomePage from "./components/homePage/HomePage";
+import EmployeesPage from "./components/employeesPage/EmployeesPage";
 function App() {
   return (
     <div className={s.wrapper}>
       <NavBar />
-      <Route exact path='/' component={Content}/>
-      <Route path='/employees' component={EmployeesContainer}/>
+      <Route exact path='/' component={HomePage}/>
+      <Route path='/employees' component={EmployeesPage}/>
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import s from "./employeesNames.module.css";
+import s from "./employeesFilteredNamed.module.css";
 
-function EmployeesNames({ names, checkedItems, handleChange }) {
+function EmployeesFilteredNamed({ names, checkedItems, handleChange }) {
   if (names.length === 0) {
     return <p> - </p>;
   }
@@ -24,4 +24,4 @@ function EmployeesNames({ names, checkedItems, handleChange }) {
   );
 }
 
-export default EmployeesNames;
+export default EmployeesFilteredNamed;

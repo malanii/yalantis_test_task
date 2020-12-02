@@ -1,7 +1,7 @@
 import React from "react";
-// import s from "./employeesNames.module.css";
+import s from "./employeeDob.module.css";
 
-function EmployeesBirthdaysNames({ names }) {
+function EmployeeDob({ names }) {
   return (
     <ul>
       {names.map((el) => {
@@ -18,4 +18,4 @@ function EmployeesBirthdaysNames({ names }) {
   );
 }
 
-export default EmployeesBirthdaysNames;
+export default EmployeeDob;

@@ -1,5 +1,5 @@
 import React from "react";
-import EmployeesBirthdaysNames from "./employeesBirthdaysNames/EmployeesBirthdaysNames";
+import EmployeeDob from "../employeeDob/EmployeeDob";
 import { useSelector } from "react-redux";
 
 const months = [
@@ -17,7 +17,7 @@ const months = [
   "December",
 ];
 
-function EmployeesBirthdays() {
+function EmployeesDobFullList() {
   const addedEmployees = useSelector(
     (state) => state.addEmployees.addedEmployees
   );
@@ -46,7 +46,7 @@ function EmployeesBirthdays() {
           return (
             <div>
               <li key={index}>{key}</li>
-              <EmployeesBirthdaysNames names={employeesBirthdaysObject[key]} />
+              <EmployeeDob names={employeesBirthdaysObject[key]} />
             </div>
           );
         }
@@ -55,4 +55,4 @@ function EmployeesBirthdays() {
   );
 }
 
-export default EmployeesBirthdays;
+export default EmployeesDobFullList;

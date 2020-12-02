@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import s from "./content.module.css";
+import s from "./homePage.module.css";
 import Title from "../title/Title";
-function Content() {
+function HomePage() {
   const contentTitle = "Welcome to the test task!";
   return (
     <div className={s.wrapper}>
@@ -15,4 +15,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default HomePage;

@@ -6,7 +6,7 @@ function Footer() {
       <p className={s.title}>
         React.js school<span>&#9734;</span>
       </p>
-      <p className={s.text}>by Junior Frontend Developer Yana Ignatova</p>
+      <p className={s.text}>by junior Frontend developer Yana Ignatova</p>
     </div>
   );
 }
