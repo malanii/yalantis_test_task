@@ -8,13 +8,41 @@
   justify-content: flex-start;
   width: 100%;
   padding: 0.2em 0;
-}
-.listItemText {
-  text-decoration: none;
+  font-weight: bolder;
   color: #39384a;
-  margin-right: 1em;
-}
-.listItemSpan{
-  margin: 0 0.5em;
+  font-size: 1em;
 }
 
+.listItemSpan {
+  margin: 0 0.5em;
+}
+/*input[type="checkbox" i]{}*/
+input[type="checkbox"]:before {
+  position: relative;
+  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  content: "";
+  background: white;
+  border: 1px solid #acb4c1;
+}
+
+input[type="checkbox"]:checked:after {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  top: -1.2em;
+  /*width: 0.9em;*/
+  /*height:1em;*/
+  /*background: #acb4c1;*/
+  content: "\2714";
+  color: #39384a;
+  font-size: 1em;
+  /*border: 1px solid #acb4c1;*/
+}
+input[type="checkbox"]:checked:before{
+  background: white;
+  border: 1px solid white;
+}

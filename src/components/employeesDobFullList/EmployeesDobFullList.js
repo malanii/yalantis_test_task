@@ -1,5 +1,6 @@
 import React from "react";
-import EmployeeDob from "../employeeDob/EmployeeDob";
+import s from "./employeesDobFullList.module.css";
+import EmployeesFilteredDob from "../employeesFilteredDob/EmployeesFilteredDob";
 import { useSelector } from "react-redux";
 
 const months = [
@@ -23,11 +24,13 @@ function EmployeesDobFullList() {
   );
   const employeesBirthdaysObject = months.reduce(
     (employeesBirthdaysObject, month) => {
-      employeesBirthdaysObject[month] = addedEmployees.filter((y) => {
-        const date = new Date(y.dob);
-        const monthOfBirth = date.toLocaleString("en-US", { month: "long" });
-        if (month === monthOfBirth) {
-          return y;
+      employeesBirthdaysObject[month] = addedEmployees.filter((employee) => {
+        const date = new Date(employee.dob);
+        const monthOfEmployeeBirth = date.toLocaleString("en-US", {
+          month: "long",
+        });
+        if (month === monthOfEmployeeBirth) {
+          return employee;
         }
       });
       return employeesBirthdaysObject;
@@ -36,17 +39,19 @@ function EmployeesDobFullList() {
   );
 
   if (addedEmployees.length === 0) {
-    return <p>No selected employees</p>;
+    return <p className={s.text}>No selected employees</p>;
   }
 
   return (
     <div>
-      {Object.keys(employeesBirthdaysObject).map((key, index) => {
+      {Object.keys(employeesBirthdaysObject).map((key) => {
         if (employeesBirthdaysObject[key].length > 0) {
           return (
             <div>
-              <li key={index}>{key}</li>
-              <EmployeeDob names={employeesBirthdaysObject[key]} />
+              <p className={s.text} key={key}>
+                {key}
+              </p>
+              <EmployeesFilteredDob names={employeesBirthdaysObject[key]} />
             </div>
           );
         }

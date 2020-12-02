@@ -9,15 +9,20 @@ function EmployeesFilteredNamed({ names, checkedItems, handleChange }) {
   return (
     <ul className={s.list}>
       {names.map((name) => (
-        <li key={name.id} className={s.listItem}>
+        <li key={name.id} className={s.listItem} >
           {name.lastName}
           <span className={s.listItemSpan}>{name.firstName}</span>
-          <input
-            name={name.id}
-            type="checkbox"
-            checked={!!checkedItems.some((person) => person.id === name.id)}
-            onChange={handleChange}
-          />
+
+   <input
+       className={s.customInput}
+       name={name.id}
+       type="checkbox"
+       checked={!!checkedItems.some((person) => person.id === name.id)}
+      onChange={handleChange}
+   />
+  {/*<label htmlFor={name.id}></label>*/}
+
+
         </li>
       ))}
     </ul>

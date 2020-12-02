@@ -1,16 +1,16 @@
 import React from "react";
-import s from "./employeeDob.module.css";
+import s from "./employeesFilteredDob.module.css";
 
-function EmployeeDob({ names }) {
+function EmployeesFilteredDob({ names }) {
   return (
-    <ul>
+    <ul className={s.list}>
       {names.map((el) => {
         const date = new Date(el.dob);
         const month = date.toLocaleString("en-US", { month: "long" });
         return (
-          <li key={el.id}>
+          <li key={el.id} className={s.title}>
             {el.firstName} <span> {el.lastName} </span>
-            {`${date.getUTCDate()} ${month} , ${date.getFullYear()}`}
+              {`${date.getUTCDate()} ${month}, ${date.getFullYear()}`}
           </li>
         );
       })}
@@ -18,4 +18,4 @@ function EmployeeDob({ names }) {
   );
 }
 
-export default EmployeeDob;
+export default EmployeesFilteredDob;
