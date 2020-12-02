@@ -9,7 +9,7 @@ function EmployeesBirthdaysNames({ names }) {
         const month = date.toLocaleString("en-US", { month: "long" });
         return (
           <li key={el.id}>
-            {el.firstName} <span> {el.lastName}</span>
+            {el.firstName} <span> {el.lastName} </span>
             {`${date.getUTCDate()} ${month} , ${date.getFullYear()}`}
           </li>
         );
