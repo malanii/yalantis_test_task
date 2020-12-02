@@ -10,12 +10,11 @@ export default function addEmployees(state = initialState, action) {
         ...state,
         addedEmployees: [...state.addedEmployees, action.payload],
       };
-      case types.DELETE_BIRTHDAY:
-          const addedEmployees = state.addedEmployees.filter(
-              employee => employee.id !== action.payload
-          );
-          return {...state, addedEmployees};
-
+    case types.DELETE_BIRTHDAY:
+      const addedEmployees = state.addedEmployees.filter(
+        (employee) => employee.id !== action.payload
+      );
+      return { ...state, addedEmployees };
 
     default:
       return state;
