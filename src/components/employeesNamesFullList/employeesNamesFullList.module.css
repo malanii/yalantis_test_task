@@ -12,5 +12,8 @@
 .listItem {
   text-transform: uppercase;
   margin-bottom: 1em;
+  color: #f36622;
+  font-weight: bold;
+  text-shadow: -1px 0px 19px rgba(243, 102, 34, 0.42);
 }
 
