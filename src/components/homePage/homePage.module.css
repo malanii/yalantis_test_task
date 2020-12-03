@@ -1,6 +1,6 @@
 .wrapper {
   align-self: center;
-  height: 80vh;
+  min-height: 80vh;
   align-items: center;
   display: flex;
   flex-direction: column;
