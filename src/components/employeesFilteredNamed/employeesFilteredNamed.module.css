@@ -27,33 +27,35 @@ input[type="checkbox" i] {
 input[type="checkbox"]:before {
   position: absolute;
   top: -2px;
-  left: -1px;
+  left: -2px;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   content: "";
   background: white;
+  /*border: 1px solid red;*/
   border: 1px solid #acb4c1;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 input[type="checkbox"]:checked:after {
   position: absolute;
   top: -2px;
-  left: -1px;
+  left: -2px;
   content: "\2714";
-  color: #39384a;
+  /*color: #39384a;*/
   width: 16px;
   height: 16px;
-  font-size: 12px;
-  font-weight: bold;
-  box-sizing: border-box;
+  font-size: 14px;
+  /*font-weight: bold;*/
+  /*box-sizing: border-box;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  /*background: white;*/
+  /*border: 1px solid white;*/
 }
 input[type="checkbox"]:checked:before {
-  background: white;
+  /*background: white;*/
   border: 1px solid white;
 }
