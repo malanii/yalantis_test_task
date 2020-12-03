@@ -25,14 +25,15 @@ input[type="checkbox" i] {
   padding: 0;
 }
 input[type="checkbox"]:before {
-position: relative;
+  position: relative;
   top: -2px;
-display: block;
-width: 13px;
-height:13px;
-content: "";
-background: white;
-border: 1px solid #acb4c1;
+  display: block;
+  width: 15px;
+  height: 16px;
+  content: "";
+  background: white;
+  border: 1px solid #acb4c1;
+  box-sizing: border-box;
 }
 
 input[type="checkbox"]:checked:after {
