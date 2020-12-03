@@ -17,30 +17,39 @@
   margin: 0 0.5em;
 }
 
-input{
+input {
   position: relative;
 }
 input[type="checkbox" i] {
   margin: 0;
+  padding: 0;
 }
 input[type="checkbox"]:before {
-  position: relative;
-  display: block;
-  width: 0.9em;
-  height: 0.9em;
-  content: "";
-  background: white;
-  border: 1px solid #acb4c1;
+position: relative;
+display: block;
+width: 13px;
+height:13px;
+content: "";
+background: white;
+border: 1px solid #acb4c1;
 }
 
 input[type="checkbox"]:checked:after {
   position: absolute;
-  bottom: -0.1em;
+  top: -3px;
   content: "\2714";
   color: #39384a;
-  font-size: 1.2em;
+  width: 15px;
+  height: 16px;
+  font-size: 15px;
+  font-weight: bold;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
 }
-input[type="checkbox"]:checked:before{
+input[type="checkbox"]:checked:before {
   background: white;
   border: 1px solid white;
 }
