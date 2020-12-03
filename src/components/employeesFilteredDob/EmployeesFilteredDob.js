@@ -11,7 +11,7 @@ function EmployeesFilteredDob({ names }) {
           <li key={item.id} className={s.text}>
             {item.lastName} <span> {item.firstName} - </span>
             <span className={s.textDate}>
-              {`${date.getUTCDate()} ${month}, ${date.getFullYear()}`}
+              {`${date.getUTCDate()} ${month}, ${date.getFullYear()} year`}
             </span>
           </li>
         );
