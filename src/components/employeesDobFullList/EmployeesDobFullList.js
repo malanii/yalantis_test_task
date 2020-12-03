@@ -37,11 +37,9 @@ function EmployeesDobFullList() {
     },
     {}
   );
-
   if (addedEmployees.length === 0) {
     return <p className={s.text}>No selected employees</p>;
   }
-
   return (
     <div>
       {Object.keys(employeesBirthdaysObject).map((key) => {
@@ -59,5 +57,4 @@ function EmployeesDobFullList() {
     </div>
   );
 }
-
 export default EmployeesDobFullList;

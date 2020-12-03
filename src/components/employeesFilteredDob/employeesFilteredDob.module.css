@@ -3,7 +3,11 @@
   padding: 0;
   text-align: center;
 }
-.title {
+.text {
   color: #39384a;
   font-weight: bolder;
+}
+.textDate {
+  font-weight: lighter;
+
 }

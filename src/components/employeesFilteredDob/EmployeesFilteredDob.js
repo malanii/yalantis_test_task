@@ -4,18 +4,19 @@ import s from "./employeesFilteredDob.module.css";
 function EmployeesFilteredDob({ names }) {
   return (
     <ul className={s.list}>
-      {names.map((el) => {
-        const date = new Date(el.dob);
+      {names.map((item) => {
+        const date = new Date(item.dob);
         const month = date.toLocaleString("en-US", { month: "long" });
         return (
-          <li key={el.id} className={s.title}>
-            {el.firstName} <span> {el.lastName} </span>
+          <li key={item.id} className={s.text}>
+            {item.lastName} <span> {item.firstName} - </span>
+            <span className={s.textDate}>
               {`${date.getUTCDate()} ${month}, ${date.getFullYear()}`}
+            </span>
           </li>
         );
       })}
     </ul>
   );
 }
-
 export default EmployeesFilteredDob;

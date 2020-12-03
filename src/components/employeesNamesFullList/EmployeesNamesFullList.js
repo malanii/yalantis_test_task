@@ -8,19 +8,18 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 function EmployeesNamesFullList({ alphabet, employees }) {
-  const checkedItems = useSelector(
+  const addedEmployees = useSelector(
     (state) => state.addEmployees.addedEmployees
   );
   const dispatch = useDispatch();
   const employeesListObject = alphabet.reduce((employeesListObject, letter) => {
     employeesListObject[letter] = employees.filter(
-      (y) => letter.toUpperCase() === y.lastName.charAt(0)
+      (el) => letter.toUpperCase() === el.lastName.charAt(0)
     );
     return employeesListObject;
   }, {});
-
   const handleChange = (event) => {
-    if (checkedItems.some((person) => person.id === event.target.name)) {
+    if (addedEmployees.some((person) => person.id === event.target.name)) {
       dispatch(deleteEmployeeBirthday(event.target.name));
     } else {
       const addedEmployee = employees.find(
@@ -29,17 +28,16 @@ function EmployeesNamesFullList({ alphabet, employees }) {
       dispatch(addEmployeeBirthday(addedEmployee));
     }
   };
-
   return (
     <ul className={s.list}>
-      {Object.keys(employeesListObject).map((key, index) => (
+      {Object.keys(employeesListObject).map((key) => (
         <div className={s.listItemWrapper}>
-          <li key={index} className={s.listItem}>
+          <li key={key} className={s.listItem}>
             {key}
           </li>
           <EmployeesFilteredNamed
             names={employeesListObject[key]}
-            checkedItems={checkedItems}
+            addedEmployees={addedEmployees}
             handleChange={handleChange}
           />
         </div>
@@ -47,5 +45,4 @@ function EmployeesNamesFullList({ alphabet, employees }) {
     </ul>
   );
 }
-
 export default EmployeesNamesFullList;
