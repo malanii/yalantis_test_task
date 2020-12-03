@@ -14,7 +14,7 @@
 }
 
 .listItemSpan {
-  margin: 0 0.7em 0 0.5em;
+  margin-bottom: 1em;
 }
 
 input {
@@ -29,8 +29,8 @@ input[type="checkbox"]:before {
   top: -2px;
   left: -2px;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   content: "";
   background: white;
   border: 1px solid #acb4c1;
