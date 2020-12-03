@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./employeesDobFullList.module.css";
+import s from "./style.module.css";
 import EmployeesFilteredDob from "../employeesFilteredDob/EmployeesFilteredDob";
 import { useSelector } from "react-redux";
 
@@ -45,10 +45,8 @@ function EmployeesDobFullList() {
       {Object.keys(employeesBirthdaysObject).map((key) => {
         if (employeesBirthdaysObject[key].length > 0) {
           return (
-            <div>
-              <p className={s.text} key={key}>
-                {key}
-              </p>
+            <div key={key}>
+              <p className={s.text}>{key}</p>
               <EmployeesFilteredDob names={employeesBirthdaysObject[key]} />
             </div>
           );

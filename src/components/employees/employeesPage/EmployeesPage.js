@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import s from "./employeesPage.module.css";
+import s from "./style.module.css";
 import EmployeesNamesFullList from "../employeesNamesFullList/EmployeesNamesFullList";
-import Title from "../title/Title";
-import PreLoader from "../preLoader/PreLoader";
-import ErrorAccess from "../errorAccess/ErrorAccess";
+import Title from "../../title/Title";
+import PreLoader from "../../preLoader/PreLoader";
+import ErrorAccess from "../../errorAccess/ErrorAccess";
 import EmployeesDobFullList from "../employeesDobFullList/EmployeesDobFullList";
-import { fetchEmployees } from "../../redux/actions/getEmployeesAction";
+import { fetchEmployees } from "../../../redux/actions/getEmployeesAction";
 
 const alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
 const employeesTitle = "Employees";

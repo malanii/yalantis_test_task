@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./employeesNamesFullList.module.css";
+import s from "./style.module.css";
 import EmployeesFilteredNamed from "../employeesFilteredNamed/EmployeesFilteredNamed";
 import {
   addEmployeeBirthday,
   deleteEmployeeBirthday,
-} from "../../redux/actions/employeeBirthdayAction";
+} from "../../../redux/actions/employeeBirthdayAction";
 import { useSelector, useDispatch } from "react-redux";
 
 function EmployeesNamesFullList({ alphabet, employees }) {
@@ -31,10 +31,8 @@ function EmployeesNamesFullList({ alphabet, employees }) {
   return (
     <ul className={s.list}>
       {Object.keys(employeesListObject).map((key) => (
-        <div className={s.listItemWrapper}>
-          <li key={key} className={s.listItem}>
-            {key}
-          </li>
+        <div key={key} className={s.listItemWrapper}>
+          <li className={s.listItem}>{key}</li>
           <EmployeesFilteredNamed
             names={employeesListObject[key]}
             addedEmployees={addedEmployees}

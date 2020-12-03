@@ -14,7 +14,7 @@ export function employeesDataLoading(bool) {
 }
 export function employeesDataHaveErrored(bool) {
   return {
-    type: "EMPLOYEES_DATA_HAVE_ERRORED",
+    type: "EMPLOYEES_DATA_HAS_ERRORS",
     payload: bool,
   };
 }

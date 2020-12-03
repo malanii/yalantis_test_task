@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./employeesFilteredNamed.module.css";
+import s from "./style.module.css";
 
 function EmployeesFilteredNamed({ names, addedEmployees, handleChange }) {
   if (names.length === 0) {

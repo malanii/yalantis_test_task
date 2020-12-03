@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./employeesFilteredDob.module.css";
+import s from "./style.module.css";
 
 function EmployeesFilteredDob({ names }) {
   return (

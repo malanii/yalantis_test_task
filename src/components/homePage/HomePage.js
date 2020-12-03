@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import s from "./homePage.module.css";
+import s from "./style.module.css";
 import Title from "../title/Title";
+
 function HomePage() {
   const contentTitle = "Welcome to the test task!";
   return (
@@ -14,5 +15,4 @@ function HomePage() {
     </div>
   );
 }
-
 export default HomePage;

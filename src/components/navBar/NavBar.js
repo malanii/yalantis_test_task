@@ -1,6 +1,7 @@
 import React from "react";
-import { Route, NavLink } from "react-router-dom";
-import s from "./navBar.module.css";
+import { NavLink } from "react-router-dom";
+import s from "./style.module.css";
+
 function NavBar() {
   return (
     <ul className={s.nav}>
@@ -17,5 +18,4 @@ function NavBar() {
     </ul>
   );
 }
-
 export default NavBar;

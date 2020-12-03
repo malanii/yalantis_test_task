@@ -1,4 +1,5 @@
 import * as types from "../types";
+
 const initialState = {
   addedEmployees: [],
 };
@@ -15,7 +16,6 @@ export default function addEmployees(state = initialState, action) {
         (employee) => employee.id !== action.payload
       );
       return { ...state, addedEmployees };
-
     default:
       return state;
   }

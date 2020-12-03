@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./errorAccess.module.css";
+import s from "./style.module.css";
 import { Link } from "react-router-dom";
 
 function ErrorAccess() {
@@ -12,5 +12,4 @@ function ErrorAccess() {
     </div>
   );
 }
-
 export default ErrorAccess;
