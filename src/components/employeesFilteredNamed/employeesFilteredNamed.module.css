@@ -26,6 +26,7 @@ input[type="checkbox" i] {
 }
 input[type="checkbox"]:before {
 position: relative;
+  top: -2px;
 display: block;
 width: 13px;
 height:13px;
