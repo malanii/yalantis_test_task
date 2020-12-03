@@ -1,11 +1,40 @@
 .wrapper {
   display: flex;
   min-height: 80vh;
+  width: 100%;
 }
 .employeesLisWrapper {
   border-right: 2px solid #acb4c1;
-  width: 70%;
 }
-.employeesBirthdaysWrapper{
-  width: 30%;
+@media only screen and (max-width: 599px) {
+  .employeesLisWrapper {
+    width: 50%;
+  }
+  .employeesBirthdaysWrapper {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .employeesLisWrapper {
+    width: 55%;
+  }
+  .employeesBirthdaysWrapper {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .employeesLisWrapper {
+    width: 60%;
+  }
+  .employeesBirthdaysWrapper {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .employeesLisWrapper {
+    width: 70%;
+  }
+  .employeesBirthdaysWrapper {
+    width: 30%;
+  }
 }

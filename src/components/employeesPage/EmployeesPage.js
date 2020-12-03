@@ -26,12 +26,14 @@ function EmployeesPage() {
   if (errors) {
     return <ErrorAccess />;
   }
-
   return (
     <div className={s.wrapper}>
       <div className={s.employeesLisWrapper}>
         <Title title={employeesTitle} />
-        <EmployeesNamesFullList alphabet={alphabetArray} employees={employees} />
+        <EmployeesNamesFullList
+          alphabet={alphabetArray}
+          employees={employees}
+        />
       </div>
       <div className={s.employeesBirthdaysWrapper}>
         <Title title={employeesBirthdaysTitle} />
@@ -40,5 +42,4 @@ function EmployeesPage() {
     </div>
   );
 }
-
 export default EmployeesPage;

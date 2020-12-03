@@ -6,8 +6,7 @@
   padding: 0 0.5em;
 }
 .listItemWrapper {
-  width: 22%;
-  margin: 0 1em 1em 0;
+  margin: 1em 0 0 0;
 }
 .listItem {
   text-transform: uppercase;
@@ -17,3 +16,23 @@
   text-shadow: -1px 0px 19px rgba(243, 102, 34, 0.42);
 }
 
+@media only screen and (max-width: 599px) {
+  .listItemWrapper {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .listItemWrapper {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .listItemWrapper {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .listItemWrapper {
+    width: 22%;
+  }
+}
