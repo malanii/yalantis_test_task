@@ -29,7 +29,7 @@ export function fetchEmployees() {
         dispatch(fetchedDataSuccess(res.data));
       })
       .catch((error) => {
-        dispatch(employeesDataHaveErrored(true), employeesDataLoading(false));
+        dispatch(employeesDataHaveErrored(true));
         dispatch(employeesDataLoading(false));
         console.log(error.response);
       });
