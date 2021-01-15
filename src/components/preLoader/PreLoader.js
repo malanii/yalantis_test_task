@@ -5,6 +5,7 @@ function PreLoader() {
   return (
     <div className={s.wrapper}>
       <h1 className={s.text}>Loading............</h1>
+
     </div>
   );
 }
